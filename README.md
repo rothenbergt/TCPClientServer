@@ -9,14 +9,17 @@ Client program which may perform the following:
  * Upload a file
  * Perform a GET request
 
- Command line syntax:
- --------------------
- * <hostname> [-w] <filename> <byteRange>
+TCPServer.java
+=========
+This program will create a a TCPServer which listens to a specific port.
+The server has threads to handle the communication of incoming clients.
 
- * GET <filename> <HTTPVersion>
-   HOST: <hostname>
-
-
-Command line argument1: host domain name
-Command line argument2: filename [-w] flag to write to server
-Command line argument3: byte range
+ServerThread.java
+=========
+A thread will be spun up whenever an incoming client
+Needs to be served. This thread handles all requests
+from clients. The requests this server can handle:
+ * Send File
+ * Send File (Specific amount of bytes)
+ * Write File
+ * GET Request
