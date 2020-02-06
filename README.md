@@ -1,6 +1,3 @@
-# TCPClientServer
-Java implementation of client/server TCP socket file server
-
 TCPClient.java
 =========
 Client program which may perform the following:
